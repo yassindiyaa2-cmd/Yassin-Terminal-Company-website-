@@ -21,6 +21,22 @@ section{padding:60px 0}.section-head{display:flex;justify-content:space-between;
 .contact{background:linear-gradient(120deg,#20173b,#101c2a);border:1px solid #ffffff15;border-radius:25px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact h2{margin:0 0 8px;font-size:28px}.contact p{margin:0;color:#c3c2d4}.contact .btn{white-space:nowrap}
 footer{border-top:1px solid var(--line);margin-top:60px;padding:25px 0;color:var(--muted);font-size:12px}.foot{display:flex;align-items:center;justify-content:space-between;gap:15px}.admin-trigger{opacity:.18;border:0;background:none;color:#aaa;cursor:pointer;font-size:12px}.admin-trigger:hover{opacity:.8}
 .modal{position:fixed;inset:0;z-index:20;background:#000b;display:none;align-items:center;justify-content:center;padding:16px;overflow:auto}.modal.open{display:flex}.dialog{width:min(700px,100%);max-height:92vh;overflow:auto;background:#11111b;border:1px solid #ffffff1d;border-radius:20px;padding:23px;box-shadow:0 25px 100px #0009}.dialog h2{margin:0 0 16px}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:13px;color:#d4d4e3}.field input,.field textarea,.field select{width:100%;border:1px solid #ffffff1b;background:#090910;color:white;border-radius:10px;padding:11px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{min-height:85px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dialog-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.btn.gray{background:#ffffff12;border:1px solid var(--line)}.admin-list{display:grid;gap:9px;margin-top:18px}.admin-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;background:#ffffff07;border:1px solid var(--line);border-radius:11px}.admin-item small{display:block;color:var(--muted)}.delete{border:1px solid #ff727255;color:#ff9c9c;background:#ff5b5b12;border-radius:8px;padding:7px 10px;cursor:pointer}.note{color:#ffcf8b;font-size:12px;margin-top:12px;line-height:1.6}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:40;background:#202032;border:1px solid var(--line);padding:11px 17px;border-radius:12px;display:none}
+
+.sample-dashboard{border:1px solid var(--line);background:#0c0c14;border-radius:14px;padding:15px;overflow:hidden}
+.sample-top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.sample-chip{font-size:11px;border:1px solid var(--line);background:#ffffff08;padding:5px 9px;border-radius:8px;color:var(--muted)}
+.sample-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:12px}
+.sample-kpi{background:#171725;border:1px solid var(--line);padding:12px;border-radius:10px;min-width:0}
+.sample-kpi small{display:block;color:var(--muted);font-size:11px}.sample-kpi strong{font-size:18px;display:block;margin-top:4px}
+.sample-table{width:100%;border-collapse:collapse;font-size:12px}.sample-table th,.sample-table td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--line)}.sample-table th{color:var(--muted);font-weight:normal}
+.sample-app{max-width:340px;margin:auto;border:6px solid #292938;border-radius:28px;padding:16px;background:#10101a;min-height:300px}
+.sample-app-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.sample-app-card{border:1px solid var(--line);background:#1a1a2a;padding:13px;border-radius:13px;margin:9px 0}
+.sample-app-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sample-app-grid div{padding:14px 8px;border-radius:12px;background:#202035;text-align:center;font-size:12px}
+.sample-bar{height:7px;border-radius:9px;background:#29293c;margin:10px 0}.sample-bar span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+@media(max-width:500px){.sample-kpis{grid-template-columns:1fr}.sample-table{font-size:10px}.sample-table th,.sample-table td{padding:8px 4px}}
+
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding:65px 0 45px;gap:28px}.visual{min-height:260px}.projects,.services{grid-template-columns:repeat(2,1fr)}nav{gap:12px}.nav-cta{display:none}.contact{align-items:flex-start;flex-direction:column}}
 @media(max-width:540px){nav{display:none}.projects,.services{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stats{gap:20px}.contact{padding:25px}.row{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}h1{font-size:39px}}
 </style>
@@ -63,6 +79,15 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:25px 0;color:var
 <div class="admin-list" id="adminList"></div>
 <p class="note">مهم: GitHub Pages يستضيف موقعاً ثابتاً. المشاريع والإعدادات تُحفظ حالياً في هذا المتصفح فقط، ولن تظهر تلقائياً للزوار الآخرين أو على أجهزة ثانية. كذلك الرمز السري داخل ملفات الموقع ليس حماية حقيقية؛ لأي إدارة آمنة ومتزامنة نحتاج ربط قاعدة بيانات وتسجيل دخول.</p>
 </div></div>
+
+<div class="modal" id="sampleModal"><div class="dialog" style="max-width:760px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h2 id="sampleTitle">معاينة نموذج</h2><button class="btn gray" id="closeSample">إغلاق ✕</button></div>
+<p id="sampleSubtitle" style="color:var(--muted);margin-top:-8px"></p>
+<div id="sampleContent"></div>
+<div class="dialog-actions"><a class="btn" href="#contact" id="sampleOrder">أريد نموذج مشابه ↗</a></div>
+<p class="note">هذه معاينات تصميمية تجريبية داخل معرض الأعمال، وليست أنظمة منشورة أو متصلة بقاعدة بيانات.</p>
+</div></div>
+
 <div class="toast" id="toast"></div>
 <script>
 /*
@@ -72,16 +97,41 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:25px 0;color:var
 const ADMIN_PASSWORD = "Sino2026!";
 const KEYS = {projects:"portfolio_projects_v1",settings:"portfolio_settings_v1"};
 let projects = load(KEYS.projects, []);
-let settings = load(KEYS.settings, {name:"استوديو رقمي", whatsapp:""});
+let settings = load(KEYS.settings, {name:"استوديو رقمي", whatsapp:"9647770033790"});
 let editingId = null;
+
+const starterSamples = [
+{id:"sample-accounting",name:"نظام محاسبة وإدارة مالية",type:"نظام محاسبي",desc:"نموذج لوحة تحكم للمبيعات والمصاريف والأرباح والفواتير.",icon:"📊",cover:"linear-gradient(135deg,#1b3150,#17243a)",demo:"accounting"},
+{id:"sample-clinic",name:"نظام إدارة عيادة",type:"نظام إدارة",desc:"نموذج لإدارة المرضى والمواعيد والسجلات والحسابات.",icon:"🩺",cover:"linear-gradient(135deg,#153b3d,#172b39)",demo:"clinic"},
+{id:"sample-gym",name:"تطبيق نادي رياضي",type:"تطبيق موبايل",desc:"نموذج تطبيق للكابتن والمتدربين والكورسات والاشتراكات.",icon:"💪",cover:"linear-gradient(135deg,#4a2638,#24203c)",demo:"gym"},
+{id:"sample-store",name:"متجر إلكتروني",type:"موقع تجاري",desc:"نموذج واجهة متجر لعرض المنتجات والتصنيفات وطلبات الشراء.",icon:"🛍️",cover:"linear-gradient(135deg,#43311e,#2b203b)",demo:"store"}
+];
+if(!projects.length){projects=starterSamples.slice();persist();}
+
 function load(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch{return f}}
 function persist(){localStorage.setItem(KEYS.projects,JSON.stringify(projects));}
 function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function validUrl(s){try{const u=new URL(s);return u.protocol==="http:"||u.protocol==="https:"}catch{return false}}
 function showToast(s){const t=document.getElementById("toast");t.textContent=s;t.style.display="block";setTimeout(()=>t.style.display="none",2600)}
-function applySettings(){document.getElementById("brandName").textContent=settings.name||"استوديو رقمي";document.getElementById("footerName").textContent=settings.name||"استوديو رقمي";document.title=(settings.name||"استوديو رقمي")+" | معرض الأعمال";const phone=(settings.whatsapp||"").replace(/\D/g,"");document.getElementById("contactBtn").href=phone?"https://wa.me/"+phone:"https://wa.me/";document.getElementById("siteName").value=settings.name||"";document.getElementById("whatsapp").value=settings.whatsapp||""}
+function applySettings(){if(!settings.whatsapp)settings.whatsapp="9647770033790";document.getElementById("brandName").textContent=settings.name||"استوديو رقمي";document.getElementById("footerName").textContent=settings.name||"استوديو رقمي";document.title=(settings.name||"استوديو رقمي")+" | معرض الأعمال";const phone=(settings.whatsapp||"").replace(/\D/g,"");document.getElementById("contactBtn").href=phone?"https://wa.me/"+phone:"https://wa.me/";document.getElementById("siteName").value=settings.name||"";document.getElementById("whatsapp").value=settings.whatsapp||""}
 function renderProjects(){const grid=document.getElementById("projectsGrid");if(!projects.length){grid.innerHTML='<div class="empty"><div style="font-size:34px;margin-bottom:8px">✦</div><strong>أول مشروع إلك يبدأ من هنا</strong><br><span style="font-size:13px">من لوحة الإدارة أضف أول موقع من أعمالك، وراح يظهر هنا بهذا المتصفح.</span></div>';return}
-grid.innerHTML=projects.map(p=>`<article class="card"><div class="cover">${p.image&&validUrl(p.image)?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.remove()">`:`<span class="placeholder">✦</span>`}</div><div class="card-body"><span class="tag">${esc(p.type||"مشروع رقمي")}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc||"مشروع رقمي من أعمالنا.")}</p>${p.url&&validUrl(p.url)?`<a class="card-link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">شاهد الموقع ↗</a>`:"<span class='card-link'>قريباً</span>"}</div></article>`).join("");}
+grid.innerHTML=projects.map(p=>`<article class="card"><div class="cover" style="background:${esc(p.cover||"linear-gradient(135deg,#24213c,#152b3c)")}">${p.image&&validUrl(p.image)?`<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.remove()">`:`<span class="placeholder">${esc(p.icon||"✦")}</span>`}</div><div class="card-body"><span class="tag">${esc(p.type||"مشروع رقمي")}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc||"مشروع رقمي من أعمالنا.")}</p>${p.demo?`<button class="card-link preview-btn" data-demo="${esc(p.demo)}" style="border:0;background:none;padding:0;cursor:pointer;font-weight:bold">استعرض النموذج ↗</button>`:p.url&&validUrl(p.url)?`<a class="card-link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">شاهد الموقع ↗</a>`:`<a class="card-link" href="#contact">اطلب نموذج مشابه ↗</a>`}</div></article>`).join("");
+grid.querySelectorAll(".preview-btn").forEach(btn=>btn.addEventListener("click",()=>showSample(btn.dataset.demo)));
+}
+
+function showSample(kind){
+ const title=document.getElementById("sampleTitle"),sub=document.getElementById("sampleSubtitle"),content=document.getElementById("sampleContent");
+ const demos={
+ accounting:{title:"نموذج نظام المحاسبة",sub:"لوحة تحكم عربية لإدارة الحسابات — بيانات شكلية للعرض فقط.",html:`<div class="sample-dashboard"><div class="sample-top"><strong>📊 لوحة الحسابات</strong><span class="sample-chip">الفترة: هذا الشهر ▾</span></div><div class="sample-kpis"><div class="sample-kpi"><small>إجمالي المبيعات</small><strong>١٢,٤٥٠,٠٠٠ د.ع</strong></div><div class="sample-kpi"><small>المصاريف</small><strong>٣,١٢٠,٠٠٠ د.ع</strong></div><div class="sample-kpi"><small>صافي الربح</small><strong>٩,٣٣٠,٠٠٠ د.ع</strong></div></div><div class="sample-kpi"><strong style="font-size:14px">ملخص الأداء</strong><div class="sample-bar"><span style="width:82%"></span></div><div class="sample-bar"><span style="width:54%"></span></div><div class="sample-bar"><span style="width:68%"></span></div></div><div style="overflow:auto;margin-top:12px"><table class="sample-table"><thead><tr><th>الفاتورة</th><th>العميل</th><th>المبلغ</th><th>الحالة</th></tr></thead><tbody><tr><td>#INV-104</td><td>عميل تجريبي</td><td>٢٥٠,٠٠٠ د.ع</td><td>مدفوعة</td></tr><tr><td>#INV-105</td><td>متجر تجريبي</td><td>١٨٠,٠٠٠ د.ع</td><td>قيد الدفع</td></tr><tr><td>#INV-106</td><td>شركة تجريبية</td><td>٤٢٠,٠٠٠ د.ع</td><td>مدفوعة</td></tr></tbody></table></div></div>`},
+ clinic:{title:"نموذج نظام إدارة عيادة",sub:"تصميم أولي لإدارة المواعيد والمرضى — ليس ملفاً طبياً حقيقياً.",html:`<div class="sample-dashboard"><div class="sample-top"><strong>🩺 عيادتي — لوحة الإدارة</strong><span class="sample-chip">الأحد، ١٢ أكتوبر</span></div><div class="sample-kpis"><div class="sample-kpi"><small>مواعيد اليوم</small><strong>١٨</strong></div><div class="sample-kpi"><small>مراجعين جدد</small><strong>٦</strong></div><div class="sample-kpi"><small>مبالغ مستلمة</small><strong>٧٥٠,٠٠٠ د.ع</strong></div></div><div class="sample-kpi"><strong style="font-size:14px">جدول المواعيد</strong><table class="sample-table"><tbody><tr><td>٠٩:٠٠</td><td>مراجع تجريبي ١</td><td>فحص</td></tr><tr><td>١٠:٣٠</td><td>مراجع تجريبي ٢</td><td>تنظيف</td></tr><tr><td>١٢:٠٠</td><td>مراجع تجريبي ٣</td><td>متابعة</td></tr></tbody></table></div></div>`},
+ gym:{title:"نموذج تطبيق النادي الرياضي",sub:"واجهة موبايل تجريبية للكابتن والمتدربين والكورسات.",html:`<div class="sample-app"><div class="sample-app-head"><strong>💪 FIT ZONE</strong><span>☰</span></div><div class="sample-app-card" style="background:linear-gradient(120deg,#51348a,#23677b)"><small>أهلاً بك، أحمد!</small><h3 style="margin:4px 0">جاهز لتمرين اليوم؟</h3><small>خطة التدريب الأسبوعية</small></div><div class="sample-app-grid"><div>🏋️<br><strong>تماريني</strong></div><div>📅<br><strong>جدولي</strong></div><div>🥗<br><strong>خطة التغذية</strong></div><div>📈<br><strong>تقدمي</strong></div></div><div class="sample-app-card"><strong>كورس القوة — الأسبوع ٢</strong><div class="sample-bar"><span style="width:65%"></span></div><small style="color:var(--muted)">اكتمال البرنامج ٦٥٪</small></div></div>`},
+ store:{title:"نموذج المتجر الإلكتروني",sub:"واجهة متجر قابلة للتخصيص حسب المنتجات والهوية البصرية.",html:`<div class="sample-dashboard"><div class="sample-top"><strong>✦ NOVA STORE</strong><span class="sample-chip">الرئيسية　 المنتجات　 تواصل</span></div><div style="padding:20px;border-radius:14px;background:linear-gradient(115deg,#44306b,#1e6371);margin-bottom:12px"><small>تشكيلة جديدة</small><h2 style="margin:5px 0">اختيارات تناسبك</h2><span style="font-size:12px">منتجات مختارة بعناية وجودة عالية.</span></div><div class="sample-kpis"><div class="sample-kpi" style="text-align:center"><div style="font-size:28px">🎧</div><strong style="font-size:14px">سماعات</strong><small>٤٥,٠٠٠ د.ع</small></div><div class="sample-kpi" style="text-align:center"><div style="font-size:28px">⌚</div><strong style="font-size:14px">ساعة ذكية</strong><small>٦٥,٠٠٠ د.ع</small></div><div class="sample-kpi" style="text-align:center"><div style="font-size:28px">🎒</div><strong style="font-size:14px">حقيبة</strong><small>٣٠,٠٠٠ د.ع</small></div></div></div>`}
+ };
+ const d=demos[kind];if(!d)return;title.textContent=d.title;sub.textContent=d.sub;content.innerHTML=d.html;openModal("sampleModal");
+}
+document.getElementById("closeSample").addEventListener("click",()=>closeModal("sampleModal"));
+document.getElementById("sampleOrder").addEventListener("click",()=>closeModal("sampleModal"));
+
 function renderAdminList(){const el=document.getElementById("adminList");if(!projects.length){el.innerHTML="<p style='color:var(--muted);font-size:13px'>ماكو مشاريع مضافة لحد الآن.</p>";return}el.innerHTML=projects.map(p=>`<div class="admin-item"><div><strong>${esc(p.name)}</strong><small>${esc(p.type||"مشروع")}</small></div><div style="display:flex;gap:7px"><button class="btn gray" onclick="editProject('${p.id}')">تعديل</button><button class="delete" onclick="deleteProject('${p.id}')">حذف</button></div></div>`).join("")}
 function openModal(id){document.getElementById(id).classList.add("open")}function closeModal(id){document.getElementById(id).classList.remove("open")}
 document.getElementById("adminTrigger").addEventListener("click",()=>{document.getElementById("passwordInput").value="";openModal("loginModal");setTimeout(()=>document.getElementById("passwordInput").focus(),100)});
